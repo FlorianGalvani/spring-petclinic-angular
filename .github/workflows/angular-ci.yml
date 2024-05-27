@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: production-build
-          path: ./dist  # Adjust this path if your build output is located in a different directory
+          path: ./dist 
 
   deploy:
     needs: build
@@ -71,4 +71,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with: 
           app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
-          package: './dist'  # Adjust this path if your build output is located in a different directory
+          package: './dist' 
